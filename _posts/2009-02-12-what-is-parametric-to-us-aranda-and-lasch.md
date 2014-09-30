@@ -1,0 +1,9 @@
+---
+ layout: post
+ title: "What is parametric to us ? / Aranda and Lasch"
+---
+
+> We once built some baskets with a Native-American basket weaver named Terrol Johnson, and learned we have much in common. Before Terrol, we had always described our approach to design as _computational_, since we preferred to create our own design tools rather than purchase them. this meant we could use a very fundamental type of language, computer code, to build up our concepts, whatever these may have been. our exchances with Terrol taught us something else : that with any technique -- whether one calls t craft or computation -- there exists a certain disengagement from the object being formed ; the process becomes more about the _relations_ around that objets.
+> 
+> Terrol spole of masket-making as a process that brings people together, both those around him and the ancestors through wich he continues a tradition. He spoke of many voices in that object, as if each basket was, in essence, a conversation. So too, we began to think of making architecture as a conversation between themes of universal significance, such as geometry and matter, with the actual experiences through which these themes become manifest. It is a bouldless and inspiring conversation, one that reminds us that designing can be about communing between two worlds ; one entirely abstract and coded, the other very real and alive, like what we find through our interactions every day with people, communities, and cities. In the end, like those baskets, the truly inspired moment of design comes with the realization that neither of these worlds is of our own making--both were always there, and somehow discovered along the way.
+> <cite>What is parametric to us ?, [From control to design](http://www.actar.es/index.php?option=com_dbquery&amptask=ExecuteQuery&qid=2&idllibre=3783&lang=en), Aranda and Lasch</cite>

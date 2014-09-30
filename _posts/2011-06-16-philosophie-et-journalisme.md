@@ -1,0 +1,17 @@
+---
+ layout: post
+ title: philosophie et journalisme
+---
+
+L'actualité du petit monde de la philosophie académique est plutôt mouvementé depuis quelques semaines. Luc Ferry, ce [forcat de la patrie qu'on oublie trop souvent](http://leplus.nouvelobs.com/contribution/2315;luc-ferry-travaille-pour-la-france-les-preuves.html), a su rappeller qu'il n'était pas un politique mais bien un universitaire et a prodigué une magistral leçon gestion de poste, bientôt « façon collège de france. » Lieux prestigieux où se déroule le grand n'importe quoi journalistique de la semaine sous la forme d'un commentaire sur [les premières leçons de Claudine Tiercelin à la chaire de métaphysique et de la philosophie de la connaissance](http://bibliobs.nouvelobs.com/essais/20110608.OBS4766/l-inconnue-du-college-de-france.html).
+
+Bon il est facile de constater que l'article en lui-même ne vaut pas grand chose. Les sources, les citations, l'usage de l'emphase, les approximations (sérieux, « Quayle » quoi), le chauvinisme degré zéro font que l'information est entre l'aléatoire et le ridicule. C'est à se demander s'il y a eu vraiment un entretien ou si c'est un article-fiction avec voix-off pour le style.
+
+- Sur le blog de [Marie-Anne Paveau](http://penseedudiscours.hypotheses.org/5674), on y remarque l'étrange trope de désigner les philosophes femmes par leur corporéité. En même temps, il me semble que "le philosophe à chemise" désigne à peu près une seule personne dans le champ francophone et bien avant que les anglophones ne marquent l'expression. Les autres à part être chauve ou sur-chevelus, en fait, je vois pas trop comment on pourrait abusé des stéréotypes.
+- Sur [Philotropes](http://blog.philotropes.org/post/2011/06/14/Quyle-sur-la-relativit%C3%A9-ontologique), après avoir plus ou moins défendu Tiercelin et enterré le cas , le débat a pris la tournure habituelle du bon vieux analytiques vs continentaux.
+
+J'ai comme l'impression que ce moment où Desanti appelle à la endosser la positivité et devenir des vrais scientifiques (dont le seul successeur sera finalement Sylvain Auroux ?) avant d'être des philosophes (1) a complètement disparu. Vu qu'aujourd'hui, « [la moindre des choses pour un philosophe est de ne pas s’avancer masqué](http://www.college-de-france.fr/default/EN/all/met_phi/Lecon_inaugurale_du_5_mai_2__1.htm) ». Je me demande à quelle point la réaction des philosophes non-analytiques (2) n'est pas finalement similaire et symétrique à la réaction de certains théoriciens de sciences humaines d'une part et de l'autre la réaction des scientifiques quand les sociologues ont commencé à prendre le relai des philosophes des sciences. Au final, des courants comme la XPhi ne fait pas parler les psychologues autant que les philosophes qui ont encore moins à voir avec les méthodes expérimentales ou la psychologie.
+
+(1): j'y étais pas, j'interprète d'après François Dosse et les maigres lectures de Desanti. Wikipedia qui semble n'avoir gardé qu'une autre perspective de ces petites histoires d'écoles.
+
+(2): j'avais envie de rajouter les « et occidentaux » parce qu'apparement en dehors des commentaires et et problèmes d'origines européennes et nord-américaines, le reste n'est plus de la philosophie.

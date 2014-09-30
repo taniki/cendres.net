@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cendres.net</title>
+    <description>duong tam kien - sociologue/architecte de l&#39;information
+</description>
+    <link>http://cendres.net/</link>
+    <atom:link href="http://cendres.net/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Tue, 30 Sep 2014 16:56:37 +0200</pubDate>
+    <lastBuildDate>Tue, 30 Sep 2014 16:56:37 +0200</lastBuildDate>
+    <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>the challenge of importing RDF into neo4j</title>
+        <description>&lt;p&gt;After some considerations, I wanted to give a try to store dbpedia extracts into neo4j but then problems emerge.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://neo4j.org/&quot;&gt;Neo4j&lt;/a&gt; seems to be a top-tier graph database, mainly written for java environnement but there is an embed python bindings and in last case a REST interface. As told in the &lt;a href=&quot;/2012/05/25/rdf-time-implementation/&quot;&gt;previous article&lt;/a&gt;, the model as some extra-features than won&amp;#39;t feat with an orthodox RDF graph model but then it opens rooms for some extra logic.&lt;/p&gt;
+
+&lt;p&gt;Trying to keep a python environnement, I mainly got the &lt;a href=&quot;http://rogueleaderr.tumblr.com/post/14464258963/using-neo4j-graph-database-and-python-to-work-with-rdf&quot;&gt;same problems that this guy&lt;/a&gt; :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The python bindings are not very easy to install.&lt;/li&gt;
+&lt;li&gt;The REST interface is usefull but quiet slow. Handy but mostly helpless when it comes to import big graphs. Most libraries like &lt;a href=&quot;http://bulbflow.com/&quot;&gt;bulbflow&lt;/a&gt; lie upon the REST interface.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I then started to write a slow and dirty python script that open RDF files and store them in neo4j. But stopped quickly because of more structural problems. I&amp;#39;m also not very sure about keeping possible performance issues even if they will be deal locally and not in the user space.&lt;/p&gt;
+
+&lt;h2&gt;RDF Logic vs Neo4j&lt;/h2&gt;
+
+&lt;p&gt;The main problems concerning the RDF format is that I didn&amp;#39;t find a way to keep information about variables. For example :&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;quot;Jacques Lacan&amp;quot;@en
+&amp;quot;Jacques Emile Lacan&amp;quot;@en
+&amp;quot;Jacques Lacan&amp;quot;@fr
+&amp;quot;Jacques Émile Lacan&amp;quot;@fr
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Will likely be difficult to convert into a property because properties don&amp;#39;t have properties in neo4j syntax. You also don&amp;#39;t necessarily convert everything into nodes. Possible solution will be to use the possibility for property values to be array of primitives (but brings the further problem of separation of value that are litterals or URI).&lt;/p&gt;
+
+&lt;p&gt;The same goes for format information like :&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;quot;1905-02-02&amp;quot;^^&amp;lt;http://www.w3.org/2001/XMLSchema#date&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This problem could be avoid and store the information as it is and let the future deal with the problem.&lt;/p&gt;
+
+&lt;p&gt;Altough the distinction between URIs and URL stored in litterals can be skipped by using relationships. The bad point is that you can have objects with properties and relationships having the same information but not the same form because of the object.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;http://cendres.net/ontologies&amp;gt;
+&amp;quot;&amp;lt;http://cendres.net/ontologies&amp;gt;&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        <pubDate>Mon, 28 May 2012 00:00:00 +0200</pubDate>
+        <link>http://cendres.net/2012/05/28/the-challenge-of-importing-rdf-into-neo4j.html</link>
+        <guid isPermaLink="true">http://cendres.net/2012/05/28/the-challenge-of-importing-rdf-into-neo4j.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>RDF, time, implementation</title>
+        <description>&lt;p&gt;Continuing to investigate about RDF as model framework for future works, it is no surprise to see that triple model include some textbook metaphysic problems : time and parts. I think I will put philosophical considerations for later and dive directly into formalisation problem. If you are interested by the philosophical part, Peter Simons&amp;#39; &lt;a href=&quot;http://books.google.fr/books/about/Parts.html?id=vX7t7n9Mk_wC&amp;amp;redir_esc=y&quot;&gt;Parts&lt;/a&gt; and Roderick Chisolm&amp;#39;s &lt;a href=&quot;http://books.google.fr/books?id=2x2I93Ui9i4C&amp;amp;dq=person+and+object&amp;amp;hl=fr&amp;amp;source=gbs_navlinks_s&quot;&gt;Person and Object&lt;/a&gt; should be good starts.&lt;/p&gt;
+
+&lt;h3&gt;time&lt;/h3&gt;
+
+&lt;p&gt;There have been some investivation about &lt;a href=&quot;http://www.dcc.uchile.cl/%7Ecgutierr/papers/&quot;&gt;temporal RDF graph&lt;/a&gt; by &lt;a href=&quot;http://www.dcc.uchile.cl/%7Ecgutierr/&quot;&gt;Gutierrez&lt;/a&gt;. The formalism (s p[t] o) he proposed could certainly be converted into a non temporal graph where relations keep a temporal property.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;mary is-married-with[1999-2008] john
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;could be translated to :&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;mary is-part-of marriage-marry-john
+marriage-marry-john validity 1999-2008
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The obvious fact is that it multiply quiet quickly the complexity of declarations and queries. But it also give a better understanding of objects where parts come in and out more than one time.&lt;/p&gt;
+
+&lt;h3&gt;implementation&lt;/h3&gt;
+
+&lt;p&gt;Anyway the problem is that temporal graph are not part of the current RDF specification draft nor SPARQL specification draft. One solution could be to switch to graph model where relationships also have properties (eg. &lt;a href=&quot;http://neo4j.org&quot;&gt;Neo4j&lt;/a&gt;). But in a some way, I think I&amp;#39;ll now stick to RDF and SPARQL because of W3C and keep it simple&amp;#39;s spirit.&lt;/p&gt;
+
+&lt;p&gt;I still have not chose or really tested triplestore solutions. I am thinking of a combination of &lt;a href=&quot;http://www.mongodb.org/&quot;&gt;MongoDB&lt;/a&gt; and &lt;a href=&quot;https://github.com/antoniogarrote/rdfstore-js&quot;&gt;rdfstore-js&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1&gt;influence network of philosophers&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/article_images/2012-05-25-rdf-time-implementation/philosophers1.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is a quiet brute output of the produced non-temporal graph rendered in gephi. Here is a &lt;a href=&quot;/assets/article_images/2012-05-25-rdf-time-implementation/philosophers1.pdf&quot;&gt;A0 pdf version&lt;/a&gt; of this visualization with label. Big nodes are the usual suspects (Kant, Hegel, Spinoza, Plato, etc.). It is mainly for eyecandiness purpose. We all agree this is far from informative as viz and conforts me in my position about social network visualization.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 25 May 2012 00:00:00 +0200</pubDate>
+        <link>http://cendres.net/2012/05/25/rdf-time-implementation.html</link>
+        <guid isPermaLink="true">http://cendres.net/2012/05/25/rdf-time-implementation.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>sparql and computationnal sociology - 1</title>
+        <description>&lt;p&gt;Yesterday saw my first steps in SPARQL. Not necessarly an very pleasant experience, it seems promising anyway. Don&amp;#39;t look at this post as a tutorial into SPARQL and the reality of semantic web but more as a journey log.&lt;/p&gt;
+
+&lt;p&gt;Then certainly in a vague moment of procrastination coupled with the spirit of maximalism, someone proposed to use wikipedia to produce a full automatically constructed graph of influence of philosophers among others. Quiet quickly, we went about &lt;a href=&quot;http://dbpedia.org&quot;&gt;dbpedia&lt;/a&gt; to skip the scrapping part. The aim of dbpedia is to provided a semantic version of wikipedia.&lt;/p&gt;
+
+&lt;p&gt;That is said, it provided a &lt;a href=&quot;http://dbpedia.org/sparql&quot;&gt;very handy API&lt;/a&gt; and way to query a &amp;quot;network of knowledge&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;Here is the last SPARQL query we produced to get a minimal graph of relations between philosophers.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;PREFIX dbo: &amp;lt;http://dbpedia.org/ontology/&amp;gt;
+
+select distinct ?person ?influenced ?influencedBy
+where { 
+    ?person
+        rdf:type dbo:Philosopher ;
+        foaf:name ?nameperson .
+    {
+      OPTIONAL {
+        ?person
+          dbpedia-owl:influenced ?influenced .
+
+        ?influenced rdf:type dbo:Philosopher .
+      }
+    }
+    UNION
+    {
+      OPTIONAL {
+        ?person
+          dbpedia-owl:influencedBy ?influencedBy .
+
+        ?influencedBy rdf:type dbo:Philosopher .
+      }
+    }
+}
+
+ORDER BY ?person
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;There is obviously some lacks due to wikipedia categorization &lt;em&gt;eg.&lt;/em&gt; Sigmund Freud is certainly a major influence in history of philosophical thougths but does not appear because is not tagged as a philosopher.&lt;/p&gt;
+
+&lt;h3&gt;first returns of experience&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The dataset provided has some weird bugs or the query is wrong. For example, Jacques Lacan has a some influenced links on the &lt;a href=&quot;http://dbpedia.org/resource/Jacques_Lacan&quot;&gt;web rendering&lt;/a&gt; but less when we do a &lt;a href=&quot;http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&amp;amp;query=PREFIX+dbo%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0A%0D%0Aselect+distinct+%3Fperson+%3Finfluenced%0D%0Awhere+%7B+%0D%0A++++%3Fperson%0D%0A++++++++rdf%3Atype+dbo%3APhilosopher+%3B%0D%0A++++++++foaf%3Aname+%22Jacques+Lacan%22%40en+.%0D%0A%0D%0A++++++OPTIONAL+%7B%0D%0A++++++++%3Fperson%0D%0A++++++++++dbpedia-owl%3Ainfluenced+%3Finfluenced+.%0D%0A%0D%0A++++++++%3Finfluenced+rdf%3Atype+dbo%3APhilosopher+.%0D%0A++++++%7D%0D%0A%7D%0D%0A%0D%0AORDER+BY+%3Fperson&amp;amp;format=text%2Fhtml&amp;amp;timeout=0&amp;amp;debug=on&quot;&gt;direct query&lt;/a&gt;. (Don&amp;#39;t worry, I am not switching views about lacanian psychoanalysis, I just found weird that the &lt;a href=&quot;http://dbpedia.org/resource/%C3%89lisabeth_Roudinesco&quot;&gt;first result&lt;/a&gt; does not show up more influences)&lt;/li&gt;
+&lt;li&gt;Some differences with the &amp;quot;reality&amp;quot; or common sense are certainly due to &lt;a href=&quot;http://wiki.dbpedia.org/Documentation?v=6hz&quot;&gt;dbpedia&amp;#39;s extraction process&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;It is certainly possible to use formal ontology to provide less gnostic categorization. Specially about what is a philosopher or not.&lt;/li&gt;
+&lt;li&gt;Speaking of which, I have never been very confortable with the way computer scientist and semantic web people use the word &amp;quot;ontology&amp;quot;. There is still a place for experimental and metaphysical thinking.&lt;/li&gt;
+&lt;li&gt;One should also have space to think about what is formalization there.&lt;/li&gt;
+&lt;li&gt;It is a definitively a good way to start learning (and applying) semantic web technologies. You can build pretty complex queries but syntax do not seems very complicated.&lt;/li&gt;
+&lt;li&gt;There is a good opportunities to build a game website providing problems the algorithms encounter. Technical collective intelligence feedback if you want.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;More experiences soon. Visualization (the candy part) just began (:&lt;/p&gt;
+</description>
+        <pubDate>Tue, 22 May 2012 00:00:00 +0200</pubDate>
+        <link>http://cendres.net/2012/05/22/sparql-and-computationnal-sociology---1.html</link>
+        <guid isPermaLink="true">http://cendres.net/2012/05/22/sparql-and-computationnal-sociology---1.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>the humanistic intellectual: eleven theses</title>
+        <description>&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;We should not try to define &amp;#39;the humanities&amp;#39; by asking what the humanities departments share which distinguishes them from the rest of the university. The interesting dividing line is, instead, one that cuts across departments and disciplinary matrices. It divides people busy conforming to well-understood criteria for making contributions to knowledge from people trying to expand their own moral imaginations. These latter people read books in order to enlarge their sense of what is possible and important — either for themselves as individuals or for their society. Call these people &amp;#39;humanistic intellectuals&amp;#39;. One often finds more such people in the anthropology department than in the classics department, and sometimes more in the law school that in the philosophy department.&lt;/li&gt;
+&lt;li&gt;If one asks what good these people do, what social function they perform neither &amp;#39;teaching&amp;#39; nor &amp;#39;research&amp;#39; is a very good answer. Their idea of teaching — or at least of the sort of teaching they hope to do — is not exactly the communication of knowledge, but more like stirring the kids up. When they apply for a leave or a grant, they may have to fill out forms, but all they really want to do is to read a lot more books in the hope of becoming a different sort of person.&lt;/li&gt;
+&lt;li&gt;So the real social function of the humanistic intellectuals is to instill doubts in the students about the students&amp;#39; own self-images, and about the society to which they belong. These people are the teachers who ensure that the moral consciousness of each new generation is slightly different from that of the previous generation.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;cite&gt;The humanistic intellectuals: eleven theses (1989), Richard Rorty&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Thu, 20 Oct 2011 00:00:00 +0200</pubDate>
+        <link>http://cendres.net/2011/10/20/the-humanistic-intellectual-eleven-theses.html</link>
+        <guid isPermaLink="true">http://cendres.net/2011/10/20/the-humanistic-intellectual-eleven-theses.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>tomorrow now - bruce sterling</title>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;A gizmo is neither a &amp;quot;machine&amp;quot; nor a product.&amp;quot; It doesn&amp;#39;t want you to accomplish any task in particular. It wants a relationship; it wants to be an intimate experience, as close to you as your eyebrow. It wants you engaged, it wants you pushing those buttons, it wants you faithful to the brand name and dependent on the service.&lt;/p&gt;
+
+&lt;p&gt;A gizmo needs an interface, and an interface for its interface. It needs tech support, and tech support for its tech support. Event its web pages need web pages. And this is where you work. Because the &lt;em&gt;mental&lt;/em&gt; insuffienciency of these bleeping, begging little gizmos has become a human job magnet of titanic proportions. The near-infinite complexity of a network of rapidily obsolescing, disposable gizmos can suck up near-infinite amounts of human effort and ingenuity.
+&lt;cite&gt;Tomorrow Now, Bruce Sterling&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Tue, 16 Aug 2011 00:00:00 +0200</pubDate>
+        <link>http://cendres.net/2011/08/16/tomorrow-now---bruce-sterling.html</link>
+        <guid isPermaLink="true">http://cendres.net/2011/08/16/tomorrow-now---bruce-sterling.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>hitler et la topologie</title>
+        <description>&lt;iframe width=&quot;640&quot; height=&quot;394&quot; src=&quot;http://www.youtube.com/embed/SyD4p8_y8Kw&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+</description>
+        <pubDate>Fri, 01 Jul 2011 00:00:00 +0200</pubDate>
+        <link>http://cendres.net/2011/07/01/hitler-et-la-topologie.html</link>
+        <guid isPermaLink="true">http://cendres.net/2011/07/01/hitler-et-la-topologie.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>reseau ferry</title>
+        <description>&lt;p&gt;Dans la série des réseaux où tout va bien et l&amp;#39;air de rien, ils sont là : &lt;a href=&quot;http://www.rue89.com/2011/06/13/ferry-un-emploi-pas-fictif-surtout-pour-ses-amis-209178&quot;&gt;Un article de Rue 89 à propos des connexions entre les membres du CAS à partir uniquement du cas Ferry&lt;/a&gt;. Je suppose que si on prend tous les autres un par un, il y aurait moyen d&amp;#39;augmenter le nombre de liens. Comme le soulignerait Noam Chomsky, il n&amp;#39;y a ici ni complot, ni conspiration : tout est bien visible, lisible et connectable. Je suppose qu&amp;#39;avec un peu de temps, il ne serait si compliqué de connecter groupes, personnes, temps et budgets avec quelques scripts, un peu de NLP et des sources comme wikipedia et infogreffe. Pas la peine de faire un modèle incluant des détections de collèges invisibles.&lt;/p&gt;
+
+&lt;p&gt;Par contre, comme le souligne brayden king d&amp;#39;orgtheory, &lt;a href=&quot;http://orgtheory.wordpress.com/2011/04/21/where-is-power-elite-theory-when-you-need-it/&quot;&gt;où peut bien être la théorie des élites de pouvoir quand on en a besoin ?&lt;/a&gt;. Après un amateur CTRL-F sur &amp;quot;élite&amp;quot; et &amp;quot;pouvoir&amp;quot; sur &lt;a href=&quot;http://www.afs-socio.fr/formLivreProgRT11N.php&quot;&gt;le programme 2011 de &amp;#39;AFS&lt;/a&gt;, j&amp;#39;ai envie de dire qu&amp;#39;elle n&amp;#39;est au moins pas chez les sociologues francais. Une transposition au système français serait également bien venu. Les commentaires sur le remplacement de Lauvergeon laisse parfois transparaître rapidement des histoires de territoire des grandes écoles (AREVA devait rester à quelqu&amp;#39;un du corps des Mines) qui peuvent paraître bien incompréhensibles et justement laissées place à des fantasmes sur ce que sont réellement ou non les réseaux ou motivations de classe.&lt;/p&gt;
+
+&lt;p&gt;&lt;object style=&quot;height: 390px; width: 640px&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://www.youtube.com/v/A1eBrHMOqKI?version=3&amp;start=451s&quot;&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;&gt;&lt;embed src=&quot;http://www.youtube.com/v/A1eBrHMOqKI?version=3&amp;start=451s&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; allowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;390&quot;&gt;&lt;/object&gt;&lt;/p&gt;
+
+&lt;p&gt;En termes de conséquences et du rapport intérêts individuels/responsabilités, je ne suis pas sûr que le système des écoles républicaines nous sépare tellement du niveau de connivence entre le secteur de &amp;quot;l&amp;#39;innovation financière&amp;quot; et le soutien de certains académiques. Peut être que c&amp;#39;est par ce biais que Ferry a gagné le droit à l&amp;#39;étique &amp;quot;économiste&amp;quot;. Toujours est-il que donc dans le CAS, Ferry est &amp;quot;vendu&amp;quot; par Claudine Pons et on peut trouver d&amp;#39;autres guichets où il est &lt;a href=&quot;http://www.adgency-experts.com/index.php?option=com_content&amp;amp;view=article&amp;amp;id=81&amp;amp;Itemid=106&quot;&gt;consutable en tant qu&amp;#39;économiste&lt;/a&gt; (sic). Michel Maffesoli fait aussi parti de cette belle écurie dans la partie sciences sociales. C&amp;#39;est dire le niveau d&amp;#39;expertise.&lt;/p&gt;
+
+&lt;p&gt;Sinon, à croire Gossip Philosopher, l&amp;#39;information inutile du jour est que &lt;a href=&quot;http://filosofianews.blogspot.com/2011/06/lady-gaga-se-enamoro-de-un-filosofo.html&quot;&gt;Lady Gaga et Zizek auraient aussi des liens pas que intellectuelles&lt;/a&gt;. Du coup si Slavoj a un fils et que Lady finit avec un politique, on pourrait avoir une sorte de pattern Bruni-Enthoven ou bien plus simplement Dombasle-BHL. C&amp;#39;est tellement naze comme histoire que je suis sûr que le Nouvel Obs en fera quelque chose.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 21 Jun 2011 00:00:00 +0200</pubDate>
+        <link>http://cendres.net/2011/06/21/reseau-ferry.html</link>
+        <guid isPermaLink="true">http://cendres.net/2011/06/21/reseau-ferry.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>l&#39;air de rien</title>
+        <description>&lt;p&gt;Profiter d&amp;#39;un mauvais article du nouvel obs pour commenter les potins de la philosphère, c&amp;#39;était pas très malin. Surtout qu&amp;#39;&lt;a href=&quot;http://bernat.blog.lemonde.fr/2008/11/19/un-whisky-coca-pour-aude-lancelin/&quot;&gt;Aude Lancelin était déjà fiché par les services&lt;/a&gt; pour &lt;a href=&quot;http://vipere-litteraire.over-blog.com/article-28756039.html&quot;&gt;sa capacité à mener un débat dans un cadre purement intellectuel&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Le petit blog prometteur qui ramène un peu d&amp;#39;air en ce moment, c&amp;#39;est &lt;a href=&quot;http://vanessa-schlouma.blogspot.com/&quot;&gt;tout va bien&lt;/a&gt;. Rien de bien prétentieux, théorique ou ambitieux mais juste un éclairage factuel sur les petites combines entre sphère médiatique et sphère politique. J&amp;#39;aime bien le commentaire sur ces petits arrangements, comme ça au passage, l&amp;#39;air de rien, des liens entre les gens de la sphère public. Même pas de théorie du complot ou de discours moralisateur au passage. C&amp;#39;est frais et ça donne parfois l&amp;#39;impression de lire la solution d&amp;#39;une grille de mots croisées.&lt;/p&gt;
+
+&lt;p&gt;Maintenant, selon les statistiques et toute la science du monde :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;soit ce blog va retomber dans l&amp;#39;abandon pour 3 ans&lt;/li&gt;
+&lt;li&gt;soit va donner naissance à 42 sous-blogs pour ne pas tout mélanger&lt;/li&gt;
+&lt;li&gt;soit va voir apparaître une blogroll dont les entrées et sorties seront commentées comme le mercato entre les 10 gens de l&amp;#39;internet qui partagent la même bulle&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Parce que je sais pas pourquoi mais j&amp;#39;ai remis des commentaires à ce blog.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 18 Jun 2011 00:00:00 +0200</pubDate>
+        <link>http://cendres.net/2011/06/18/lair-de-rien.html</link>
+        <guid isPermaLink="true">http://cendres.net/2011/06/18/lair-de-rien.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>philosophie et journalisme</title>
+        <description>&lt;p&gt;L&amp;#39;actualité du petit monde de la philosophie académique est plutôt mouvementé depuis quelques semaines. Luc Ferry, ce &lt;a href=&quot;http://leplus.nouvelobs.com/contribution/2315;luc-ferry-travaille-pour-la-france-les-preuves.html&quot;&gt;forcat de la patrie qu&amp;#39;on oublie trop souvent&lt;/a&gt;, a su rappeller qu&amp;#39;il n&amp;#39;était pas un politique mais bien un universitaire et a prodigué une magistral leçon gestion de poste, bientôt « façon collège de france. » Lieux prestigieux où se déroule le grand n&amp;#39;importe quoi journalistique de la semaine sous la forme d&amp;#39;un commentaire sur &lt;a href=&quot;http://bibliobs.nouvelobs.com/essais/20110608.OBS4766/l-inconnue-du-college-de-france.html&quot;&gt;les premières leçons de Claudine Tiercelin à la chaire de métaphysique et de la philosophie de la connaissance&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Bon il est facile de constater que l&amp;#39;article en lui-même ne vaut pas grand chose. Les sources, les citations, l&amp;#39;usage de l&amp;#39;emphase, les approximations (sérieux, « Quayle » quoi), le chauvinisme degré zéro font que l&amp;#39;information est entre l&amp;#39;aléatoire et le ridicule. C&amp;#39;est à se demander s&amp;#39;il y a eu vraiment un entretien ou si c&amp;#39;est un article-fiction avec voix-off pour le style.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Sur le blog de &lt;a href=&quot;http://penseedudiscours.hypotheses.org/5674&quot;&gt;Marie-Anne Paveau&lt;/a&gt;, on y remarque l&amp;#39;étrange trope de désigner les philosophes femmes par leur corporéité. En même temps, il me semble que &amp;quot;le philosophe à chemise&amp;quot; désigne à peu près une seule personne dans le champ francophone et bien avant que les anglophones ne marquent l&amp;#39;expression. Les autres à part être chauve ou sur-chevelus, en fait, je vois pas trop comment on pourrait abusé des stéréotypes.&lt;/li&gt;
+&lt;li&gt;Sur &lt;a href=&quot;http://blog.philotropes.org/post/2011/06/14/Quyle-sur-la-relativit%C3%A9-ontologique&quot;&gt;Philotropes&lt;/a&gt;, après avoir plus ou moins défendu Tiercelin et enterré le cas , le débat a pris la tournure habituelle du bon vieux analytiques vs continentaux.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;J&amp;#39;ai comme l&amp;#39;impression que ce moment où Desanti appelle à la endosser la positivité et devenir des vrais scientifiques (dont le seul successeur sera finalement Sylvain Auroux ?) avant d&amp;#39;être des philosophes (1) a complètement disparu. Vu qu&amp;#39;aujourd&amp;#39;hui, « &lt;a href=&quot;http://www.college-de-france.fr/default/EN/all/met_phi/Lecon_inaugurale_du_5_mai_2__1.htm&quot;&gt;la moindre des choses pour un philosophe est de ne pas s’avancer masqué&lt;/a&gt; ». Je me demande à quelle point la réaction des philosophes non-analytiques (2) n&amp;#39;est pas finalement similaire et symétrique à la réaction de certains théoriciens de sciences humaines d&amp;#39;une part et de l&amp;#39;autre la réaction des scientifiques quand les sociologues ont commencé à prendre le relai des philosophes des sciences. Au final, des courants comme la XPhi ne fait pas parler les psychologues autant que les philosophes qui ont encore moins à voir avec les méthodes expérimentales ou la psychologie.&lt;/p&gt;
+
+&lt;p&gt;(1): j&amp;#39;y étais pas, j&amp;#39;interprète d&amp;#39;après François Dosse et les maigres lectures de Desanti. Wikipedia qui semble n&amp;#39;avoir gardé qu&amp;#39;une autre perspective de ces petites histoires d&amp;#39;écoles.&lt;/p&gt;
+
+&lt;p&gt;(2): j&amp;#39;avais envie de rajouter les « et occidentaux » parce qu&amp;#39;apparement en dehors des commentaires et et problèmes d&amp;#39;origines européennes et nord-américaines, le reste n&amp;#39;est plus de la philosophie.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 16 Jun 2011 00:00:00 +0200</pubDate>
+        <link>http://cendres.net/2011/06/16/philosophie-et-journalisme.html</link>
+        <guid isPermaLink="true">http://cendres.net/2011/06/16/philosophie-et-journalisme.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>duck</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/images/2011/rabbitduck.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Trouvé sur &lt;a href=&quot;http://science.page8productions.com/?p=200&quot;&gt;sci-ence&lt;/a&gt; via &lt;a href=&quot;http://ieet.org/index.php/IEET/more/brin20110607&quot;&gt;David Brin&lt;/a&gt; qui j&amp;#39;espère va passer plus de temps à adapter son cycle élévation au cinéma que de radoter sur la singularité.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 09 Jun 2011 00:00:00 +0200</pubDate>
+        <link>http://cendres.net/2011/06/09/duck.html</link>
+        <guid isPermaLink="true">http://cendres.net/2011/06/09/duck.html</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

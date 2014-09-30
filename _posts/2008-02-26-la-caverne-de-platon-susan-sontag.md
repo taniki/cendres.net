@@ -1,0 +1,10 @@
+---
+ layout: post
+ title: "\"La caverne de Platon\" (Susan Sontag)"
+---
+
+<blockquote>La limite du savoir que la photographie peut donner du monde est que, tout en pouvant aiguilloner la conscience, elle ne peut en fin de compte jamais apporter aucune connaissance d'ordre éthique ou politique. Le savoir tiré des photographies sera toujours une certaine forme de sentimentalisme, qu'il soit cynique ou humaniste. Ce sera un savoir au rabais : une apparence de savoir, une apparence de vérité ; de la même façon que l'activité photographique est une apparence d'appropriation, une apparence de viol. Le mutisme même de ce qui est hypothétiquement intelligible dans les photographies est ce qui les rend séduisantes, provocantes. Leur omniprésence exerce une influence incalculable sur notre sensibilité morale. En introduisant dans ce monde déjà encombré de son double iconique, la photographie nous donne le sentiment que le monde est plus disponible qu'il ne l'est en réalité.
+
+Le besoin de voir la réalité confirmée et le vécu exalté par des photos constitue un mode de consommation esthétique dont personne aujourd'hui n'est capable de se passer. Les sociétés industrielles font de leurs membres des camés dont l'image est la drogue ; c'est la plus puissante forme de pollution mentale. Désir poignant de trouver la beauté, d'en finir d'examiner le dessous des choses, de sauver et de célébrer le corps du monde : tous ces constituants du sentiment érotique s'affirment dans le plaisir que nous prenons aux photographies. Mais d'autres sentiments, moins libérateurs, s'y expriment également. Il ne serait pas faux de dire que les gens ont un besoin compulsif de photographier : de transformer le vécu lui-même en une façon de voir. Au bout du compte, vivre quelque chose et en prendre une photo deviennent identique, et participer à un événement public équivaut de plus en plus à le regarder sous forme photographique. Mallarmé, le plus cohérent des esthètes du XIXème siècle, déclarait que tout l'univers exite pour aboutir à un livre. Aujourd'hui, tout existe pour aboutir à une photographie.
+
+<cite>La caverne de Platon, Susan Sontag</cite></blockquote>

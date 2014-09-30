@@ -1,0 +1,10 @@
+---
+ layout: post
+ title: "Fourmis et complexité des systèmes interactionnels"
+---
+
+C'est souvent la croix et la bannière pour expliquer correctement ce qu'on entend par système complexe et émergence. L'étude des comportements et de la structuration sociétale des colonies de fourmi est un des exemples-phares de la multiplicité des échelles étudiées dans les programmes systèmes complexes.
+
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="659" height="435" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="id" value="VE_Player" /><param name="align" value="middle" /><param name="FlashVars" value="bgColor=FFFFFF&amp;file=http://static.videoegg.com/ted/movies/DEBORAHGORDON-2003_high.flv&amp;autoPlay=false&amp;fullscreenURL=http://static.videoegg.com/ted/flash/fullscreen.html&amp;forcePlay=false&amp;logo=&amp;allowFullscreen=true" /><param name="quality" value="high" /><param name="allowScriptAccess" value="always" /><param name="bgcolor" value="#FFFFFF" /><param name="scale" value="noscale" /><param name="wmode" value="window" /><param name="src" value="http://static.videoegg.com/ted/flash/loader.swf" /><embed id="VE_Player" type="application/x-shockwave-flash" width="659" height="435" src="http://static.videoegg.com/ted/flash/loader.swf" wmode="window" scale="noscale" bgcolor="#FFFFFF" allowscriptaccess="always" quality="high" flashvars="bgColor=FFFFFF&amp;file=http://static.videoegg.com/ted/movies/DEBORAHGORDON-2003_high.flv&amp;autoPlay=false&amp;fullscreenURL=http://static.videoegg.com/ted/flash/fullscreen.html&amp;forcePlay=false&amp;logo=&amp;allowFullscreen=true" align="middle"></embed></object>
+
+Cette vidéo a le mérite de montrer assez clairement entre le passage entre les échelles rôles/interaction/vie de la colonie plutôt que la "stigmergie":http://en.wikipedia.org/wiki/Stigmergy, l'utilisation des traces laissées dans l'environnement, qui y fait une petite apparition et est l'autre facette importante de l'étude des fourmis.

@@ -1,0 +1,8 @@
+---
+ layout: post
+ title: "Des grands récits, Peter Sloterdijk"
+---
+
+<blockquote>
+<p>Il serait <em>grosso modo</em> tout à fait supportable que des politologues et des sociologues auxquels on doit le prolongement du journalisme par des moyens grincheux détiennent le monopole du discours sur la globalisation si les concepts fondamentaux de ces débats n'étaient pas tous presque sans exception des termes philosophiques non reconnus dont l'usage en amateur mène ç des suggestions et des distorsions de sens. Quand on philosophe sans tenir compte du niveau atteint par la discipline, on pratique toujours une au final le commerce d'un mythe, de manière dissimulée ou ouverte, et ce, fréquemment avec des conséquences dangereuses. Parmi les effets secondaires les plus remarquables de la vague paraphilosophique actuelle, on trouve la prolifération d'affirmations non-vérifiées qui ne s'arrêtent plus aux frontières des États-nations. Les copies pirates de l'ingénuité circulent librement tout autour du monde. Elles illustrent de manière frappante la thèse selon laquelle tout ce qui vise une clientèle se vend aujourd'hui ou bien sur tous les marchés, ou bien sur aucun d'entre eux. Curieusement, ce sont fréquement les esprits libéraux, ces ennemis proclamés des grands récits théologiques et philosophiques, qui se précipitent dans des hypothèses politique virulentes en utilisant à l'état brut et hors de tout contexte les concepts de globalité et de totalité, d'espace, de temps et de situation, d'unité, de pluralité, d'interaction, d'inclusion, d'exclusion et d'autres termes qui, alignés à la file, finissent par produire un éditorial.</p>
+<cite>Des grands récits in Le palais de cristal, P. Sloterdijk</cite></blockquote>

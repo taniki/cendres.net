@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Post-condense</title>
+  <meta name="description" content="duong tam kien - sociologue/architecte de l'information
+" />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="canonical" href="http://cendres.net/2009/03/11/post-condense.html">
+
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+<!--  <link rel="stylesheet" href=""> -->
+  <link rel="stylesheet" href="http://brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" >
+
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+  <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+  <script type="text/javascript" src="/assets/js/index.js"></script>
+  <script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+</head>
+
+  <body itemscope itemtype="http://schema.org/Article">
+    <!-- header start -->
+
+<a href="http://cendres.net" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/df_logo.jpg)"></span></a>
+
+<!-- header end -->
+
+    <main class="content" role="main">
+      <article class="post">
+        
+        <div class="noarticleimage">
+          <div class="post-meta">
+            <h1 class="post-title">Post-condense</h1>
+            <div class="cf post-meta-text">
+              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person"></h4>
+              on
+              <time datetime="2009-03-11T00:00:00+01:00">11 Mar 2009</time>
+              <!-- , tagged on <span class="post-tag-">, <a href="/tag/"></a></span> -->
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        
+        <section class="post-content">
+          <div class="post-reading">
+            <span class="post-reading-time"></span> read
+          </div>
+          <a name="topofpage"></a>
+          <p>Si vous zonez un peu dans les alentours de &quot;Blind&quot;:http://weareblind.fr vous aurez certainement remarqué sur twitter/facebook que nous avons mis en ligne la nouvelle peau de notre blog (d&#39;inspiration) : &quot;Condense&quot;:http://condense.fr. Belle petite aventure de quelques jours et qui aura mobilisé quelques éléments de l&#39;équipe. Modulo quelques nettoyages et neutralisations, le thème sera sans doute mis à dispo en licence libre.</p>
+
+<p><img src="http://cendres.net/images/2009/03/condense-20090311.jpg" alt="condense-20090311" title="condense-20090311" width="500" height="160" class="alignnone size-full wp-image-391" /></p>
+
+<p>En refaisant les cotations du wireframe, je me disais que l&#39;idée d&#39;un traitement horizontal n&#39;est pas novateur mais qu&#39;il ne s&#39;est pas jamais réellement développé notamment chez les concepteurs de maquettes web. Le modèle reste celui de la page de journal. Je ne pense qu&#39;il y ait là une justification strictement utilitariste. Si l&#39;invention du livre et de la reliure ont favorisé la verticalité de la page, il a parallèlement existé des rouleaux de toutes sortes qui allaient dans le sens orthogonal et le livre, quelque soit le sens d&#39;écriture, continue à aller horizontalement. Dans l&#39;autre direction, je ne connais que &quot;Dwell&quot;:http://http://www.dwell.com qui ait systématisé une utilisation verticalisante des deux pages continues pour un de leur numéro. Plus récemment, l&#39;iphone, frontrow et une grande famille de carrousel remettent en jeux l&#39;idée qu&#39;on peut naviguer dans du contenu latéralement.</p>
+
+<p>Ce qui m&#39;étonnera encore pendant un moment je crois est que les technologies étaient déjà là. Réaliser proprement ce webdesign ne nécessitait qu&#39;une arithmétique assez simple en calcul de grilles et de placement. Le premier script venu avec Processing ou de programmation graphique dépasse largement la complexité d&#39;un tel template. Il y a pour ce template qu&#39;un seul type d&#39;équation : le calcul de largeur. La seule simplification possible est la factorisation des marges. Sans un bon framework comme jquery, le temps de développement aurait seulement été multiplié par deux, çad finalement toujours moins d&#39;une semaine. Ces calculs ne sont finalement nécessaires que parce que le modèle de la page web actuel n&#39;accepte pas un dépassement horizontal comme il le fait pour la verticalité. Le seul moyen pour obtenir cet effet est d&#39;imposer la largeur des éléments contrairement à ce qui produit habituellement où l&#39;on se contente d&#39;empiler à l&#39;envers des éléments sans se soucier de la hauteur finale.</p>
+
+<p>Le frein ergonomique est plus présent. La plupart des souris à molettes (la molette se serait-elle répandue sans l&#39;imposition du web ?) ne propose que deux directions haut et bas. La navigation avec une souris Apple ou un trackpad comprenant la gestuelle rend la navigation plus fluide mais peu d&#39;utilisateurs ont ce support matériel.</p>
+
+<p>La navigation horizontale reste quelque chose de rare, reste à déterminer si elle demande une gymnastique d&#39;esprit pour la conception et/ou l&#39;utilisation et ainsi s&#39;il ne suffit pas de seulement d&#39;un peu de travail collectif pour que cela devienne simplement banal et ouvrira ainsi une nouvelle dimension en webdesign, une nouvelle gamme de patterns, etc.</p>
+
+<p>Comme toutes les avancées du web 2.0, je reste donc persuadé que le levier technologique est largement négligeable. Les frameworks et le modèle opensource favorisent le nombre de projets ainsi que l&#39;autonomie des acteurs par une possibilité d&#39;autodidactisme. Cependant le chargement asynchrone etc n&#39;est pas nécessaire pour mettre en place un dispositif reposant sur l&#39;intelligence collective. Linux est issu d&#39;une intelligence collective mais ne concerne que des outils techniques. Rétrospectivement, la révolution 2.0 concerne bien plus la généralisation de systèmes de notation, de mutualisation, de partage et donc de rendre visible des faits collectifs et non-coordonnés que de savoir si une action recharge la page ou non, si cliquer sur un petit coeur le rend rouge en limitant le volume des transactions réseaux ou non. Au fond, la question n&#39;a jamais été de mettre du javascript partout. Sur condense, il ne sert qu&#39;à contre-balancer le paradigme de la page verticale et de la pagination. Derrière ce blog, il y a donc deux choses : 1. mélange des compétences (design d&#39;interaction, architecture d&#39;information, design visuel et réalisation technique) qui n&#39;existaient pas avant et qui n&#39;auraient pas de raison d&#39;être en dehors de contexte, purement collectif donc, 2. mélange des goûts afin d&#39;offrir une visibilité à un regard collectif hétéroclite, hétérogène, hétérodoxe tourné vers une plus grande image, pas dans sa dimension technique, ie sa taille, mais dans sa complexité. C&#39;est ce qui fait toute la saveur d&#39;une telle construction.</p>
+
+        </section>
+        <footer class="post-footer">
+          <section class="share">
+            
+              
+                <a class="icon-twitter" href="http://twitter.com/share?text=Post-condense&amp;url=http://cendres.net/2009/03/11/post-condense"
+                  onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
+                </a>
+              
+            
+              
+            
+          </section>
+        </footer>
+        <div class="bottom-teaser cf">
+          <div class="isLeft">
+            <h5 class="index-headline featured"><span>Written by</span></h5>
+            <section class="author">
+              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <h4>duong tam kien</h4>
+              <p class="bio"></p>
+              <hr>
+              <p class="published">Published <time datetime="2009-03-11 00:00">11 Mar 2009</time></p>
+            </section>
+          </div>
+          
+          <div class="isRight">
+            <h5 class="index-headline featured"><span>Supported by</span></h5>
+            <footer class="site-footer">
+              <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section>
+              <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> You should subscribe to my feed.</span></a>
+              <div class="inner">
+                <section class="copyright">All content copyright <a href="/">duong tam kien</a> &copy; 2014<br>All rights reserved.</section>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </article>
+    </main>
+    <div class="bottom-closer">
+      <div class="background-closer-image"  style="background-image: url(/assets/images/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg)">
+      Image
+    </div>
+    <div class="inner">
+      <h1 class="blog-title">cendres.net</h1>
+      <h2 class="blog-description">duong tam kien - sociologue/architecte de l'information
+</h2>
+      <a href="/" class="btn">Back to Overview</a>
+    </div>
+    </div>
+  </body>
+</html>
