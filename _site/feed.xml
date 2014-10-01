@@ -6,8 +6,8 @@
 </description>
     <link>http://cendres.net/</link>
     <atom:link href="http://cendres.net/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 30 Sep 2014 16:56:37 +0200</pubDate>
-    <lastBuildDate>Tue, 30 Sep 2014 16:56:37 +0200</lastBuildDate>
+    <pubDate>Wed, 01 Oct 2014 14:25:39 +0200</pubDate>
+    <lastBuildDate>Wed, 01 Oct 2014 14:25:39 +0200</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -45,8 +45,8 @@
 &amp;quot;&amp;lt;http://cendres.net/ontologies&amp;gt;&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         <pubDate>Mon, 28 May 2012 00:00:00 +0200</pubDate>
-        <link>http://cendres.net/2012/05/28/the-challenge-of-importing-rdf-into-neo4j.html</link>
-        <guid isPermaLink="true">http://cendres.net/2012/05/28/the-challenge-of-importing-rdf-into-neo4j.html</guid>
+        <link>http://cendres.net/2012/05/28/the-challenge-of-importing-rdf-into-neo4j/</link>
+        <guid isPermaLink="true">http://cendres.net/2012/05/28/the-challenge-of-importing-rdf-into-neo4j/</guid>
         
         
       </item>
@@ -79,8 +79,8 @@ marriage-marry-john validity 1999-2008
 &lt;p&gt;Here is a quiet brute output of the produced non-temporal graph rendered in gephi. Here is a &lt;a href=&quot;/assets/article_images/2012-05-25-rdf-time-implementation/philosophers1.pdf&quot;&gt;A0 pdf version&lt;/a&gt; of this visualization with label. Big nodes are the usual suspects (Kant, Hegel, Spinoza, Plato, etc.). It is mainly for eyecandiness purpose. We all agree this is far from informative as viz and conforts me in my position about social network visualization.&lt;/p&gt;
 </description>
         <pubDate>Fri, 25 May 2012 00:00:00 +0200</pubDate>
-        <link>http://cendres.net/2012/05/25/rdf-time-implementation.html</link>
-        <guid isPermaLink="true">http://cendres.net/2012/05/25/rdf-time-implementation.html</guid>
+        <link>http://cendres.net/2012/05/25/rdf-time-implementation/</link>
+        <guid isPermaLink="true">http://cendres.net/2012/05/25/rdf-time-implementation/</guid>
         
         
       </item>
@@ -139,8 +139,8 @@ ORDER BY ?person
 &lt;p&gt;More experiences soon. Visualization (the candy part) just began (:&lt;/p&gt;
 </description>
         <pubDate>Tue, 22 May 2012 00:00:00 +0200</pubDate>
-        <link>http://cendres.net/2012/05/22/sparql-and-computationnal-sociology---1.html</link>
-        <guid isPermaLink="true">http://cendres.net/2012/05/22/sparql-and-computationnal-sociology---1.html</guid>
+        <link>http://cendres.net/2012/05/22/sparql-and-computationnal-sociology---1/</link>
+        <guid isPermaLink="true">http://cendres.net/2012/05/22/sparql-and-computationnal-sociology---1/</guid>
         
         
       </item>
@@ -158,8 +158,8 @@ ORDER BY ?person
 &lt;/blockquote&gt;
 </description>
         <pubDate>Thu, 20 Oct 2011 00:00:00 +0200</pubDate>
-        <link>http://cendres.net/2011/10/20/the-humanistic-intellectual-eleven-theses.html</link>
-        <guid isPermaLink="true">http://cendres.net/2011/10/20/the-humanistic-intellectual-eleven-theses.html</guid>
+        <link>http://cendres.net/2011/10/20/the-humanistic-intellectual-eleven-theses/</link>
+        <guid isPermaLink="true">http://cendres.net/2011/10/20/the-humanistic-intellectual-eleven-theses/</guid>
         
         
       </item>
@@ -174,8 +174,8 @@ ORDER BY ?person
 &lt;/blockquote&gt;
 </description>
         <pubDate>Tue, 16 Aug 2011 00:00:00 +0200</pubDate>
-        <link>http://cendres.net/2011/08/16/tomorrow-now---bruce-sterling.html</link>
-        <guid isPermaLink="true">http://cendres.net/2011/08/16/tomorrow-now---bruce-sterling.html</guid>
+        <link>http://cendres.net/2011/08/16/tomorrow-now---bruce-sterling/</link>
+        <guid isPermaLink="true">http://cendres.net/2011/08/16/tomorrow-now---bruce-sterling/</guid>
         
         
       </item>
@@ -185,8 +185,8 @@ ORDER BY ?person
         <description>&lt;iframe width=&quot;640&quot; height=&quot;394&quot; src=&quot;http://www.youtube.com/embed/SyD4p8_y8Kw&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 </description>
         <pubDate>Fri, 01 Jul 2011 00:00:00 +0200</pubDate>
-        <link>http://cendres.net/2011/07/01/hitler-et-la-topologie.html</link>
-        <guid isPermaLink="true">http://cendres.net/2011/07/01/hitler-et-la-topologie.html</guid>
+        <link>http://cendres.net/2011/07/01/hitler-et-la-topologie/</link>
+        <guid isPermaLink="true">http://cendres.net/2011/07/01/hitler-et-la-topologie/</guid>
         
         
       </item>
@@ -204,8 +204,8 @@ ORDER BY ?person
 &lt;p&gt;Sinon, à croire Gossip Philosopher, l&amp;#39;information inutile du jour est que &lt;a href=&quot;http://filosofianews.blogspot.com/2011/06/lady-gaga-se-enamoro-de-un-filosofo.html&quot;&gt;Lady Gaga et Zizek auraient aussi des liens pas que intellectuelles&lt;/a&gt;. Du coup si Slavoj a un fils et que Lady finit avec un politique, on pourrait avoir une sorte de pattern Bruni-Enthoven ou bien plus simplement Dombasle-BHL. C&amp;#39;est tellement naze comme histoire que je suis sûr que le Nouvel Obs en fera quelque chose.&lt;/p&gt;
 </description>
         <pubDate>Tue, 21 Jun 2011 00:00:00 +0200</pubDate>
-        <link>http://cendres.net/2011/06/21/reseau-ferry.html</link>
-        <guid isPermaLink="true">http://cendres.net/2011/06/21/reseau-ferry.html</guid>
+        <link>http://cendres.net/2011/06/21/reseau-ferry/</link>
+        <guid isPermaLink="true">http://cendres.net/2011/06/21/reseau-ferry/</guid>
         
         
       </item>
@@ -227,8 +227,8 @@ ORDER BY ?person
 &lt;p&gt;Parce que je sais pas pourquoi mais j&amp;#39;ai remis des commentaires à ce blog.&lt;/p&gt;
 </description>
         <pubDate>Sat, 18 Jun 2011 00:00:00 +0200</pubDate>
-        <link>http://cendres.net/2011/06/18/lair-de-rien.html</link>
-        <guid isPermaLink="true">http://cendres.net/2011/06/18/lair-de-rien.html</guid>
+        <link>http://cendres.net/2011/06/18/lair-de-rien/</link>
+        <guid isPermaLink="true">http://cendres.net/2011/06/18/lair-de-rien/</guid>
         
         
       </item>
@@ -251,8 +251,8 @@ ORDER BY ?person
 &lt;p&gt;(2): j&amp;#39;avais envie de rajouter les « et occidentaux » parce qu&amp;#39;apparement en dehors des commentaires et et problèmes d&amp;#39;origines européennes et nord-américaines, le reste n&amp;#39;est plus de la philosophie.&lt;/p&gt;
 </description>
         <pubDate>Thu, 16 Jun 2011 00:00:00 +0200</pubDate>
-        <link>http://cendres.net/2011/06/16/philosophie-et-journalisme.html</link>
-        <guid isPermaLink="true">http://cendres.net/2011/06/16/philosophie-et-journalisme.html</guid>
+        <link>http://cendres.net/2011/06/16/philosophie-et-journalisme/</link>
+        <guid isPermaLink="true">http://cendres.net/2011/06/16/philosophie-et-journalisme/</guid>
         
         
       </item>
@@ -264,8 +264,8 @@ ORDER BY ?person
 &lt;p&gt;Trouvé sur &lt;a href=&quot;http://science.page8productions.com/?p=200&quot;&gt;sci-ence&lt;/a&gt; via &lt;a href=&quot;http://ieet.org/index.php/IEET/more/brin20110607&quot;&gt;David Brin&lt;/a&gt; qui j&amp;#39;espère va passer plus de temps à adapter son cycle élévation au cinéma que de radoter sur la singularité.&lt;/p&gt;
 </description>
         <pubDate>Thu, 09 Jun 2011 00:00:00 +0200</pubDate>
-        <link>http://cendres.net/2011/06/09/duck.html</link>
-        <guid isPermaLink="true">http://cendres.net/2011/06/09/duck.html</guid>
+        <link>http://cendres.net/2011/06/09/duck/</link>
+        <guid isPermaLink="true">http://cendres.net/2011/06/09/duck/</guid>
         
         
       </item>
