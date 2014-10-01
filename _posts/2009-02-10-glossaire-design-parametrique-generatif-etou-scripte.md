@@ -24,5 +24,5 @@ Le design génératif est basé sur des techniques de simulation et de modélisa
 
 A la manière de la botanique, le design génératif se concentre sur la définition des graines et de l'observation des différentes formes engendrées appuyées par des techniques de modulations plutôt que sur le contrôle absolu ou la production directe d'un objet fini.
 
-<img src="/images/2009/02/191.jpg" />
+<img src="/assets/article_images/2009-02-10-glossaire-design-parametrique-generatif-etou-scripte/aranda.jpg" />
 <div class="caption">1774 series fauteuil, 2007 by <a href="http://arandalasch.com">aranda/lasch</a></div>
