@@ -24,7 +24,7 @@ Anyway the problem is that temporal graph are not part of the current RDF specif
 
 I still have not chose or really tested triplestore solutions. I am thinking of a combination of [MongoDB](http://www.mongodb.org/) and [rdfstore-js](https://github.com/antoniogarrote/rdfstore-js).
 
-# influence network of philosophers
+## influence network of philosophers
 
 ![](/assets/article_images/2012-05-25-rdf-time-implementation/philosophers1.png)
 
