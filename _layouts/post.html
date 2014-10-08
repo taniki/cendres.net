@@ -9,14 +9,14 @@
 
     <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
       <div class="article-item">
-        <header class="post-header">
-          <h2 class="post-title" itemprop="name"><a href="{{ page.url }}" itemprop="url">{{ page.title }}</a></h2>
-        </header>
+            <header class="post-header">
+              <h2 class="post-title" itemprop="name"><a href="{{ post.url }}" itemprop="url">{{ page.title }}</a></h2>
+              <time datetime="{{ page.date | date_to_long_string }}">{{ page.date | date: "%d.%m.%y" }}</time>
+            </header>
         <section class="post" itemprop="description">
           {{ content }}
         </section>
         <div class="post-meta">
-          <time datetime="{{ page.date | date_to_long_string }}">{{ page.date | date_to_long_string }}</time>
 <!--            <span class="post-tags-set">on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}}</span>-->
         </div>
       <div>
