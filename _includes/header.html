@@ -1,15 +1,11 @@
 <!-- header start -->
 <header class="blog-header">
     <h1 class="blog-title">{{ site.title }}</h1>
-    <h2 class="blog-description">{{ site.description }}</h2>
-    <div class="custom-links">
-      {% for social in site.social %}
-        <a class="icon-{{ social.icon }}" href="{{ social.url }}">
-          <i class="fa fa-{{ social.icon }}"></i>
-        </a>
-        &nbsp;&nbsp;·&nbsp;&nbsp;
-      {% endfor %}
-      <a href="/about/">About</a>
+    <div>
+      <h2 class="blog-description">{{ site.description }}</h2>
+      <div class="custom-links">
+       <a href="/process/">process</a> - <a href="/about/">about</a>
+      </div>
     </div>
 </header>
 <!-- header end -->

@@ -15,6 +15,42 @@ h1 {
   font-weight: 400;
   font-style: normal;
   color: rgba(206,206,206,1);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width : 800px;
+  margin: 0 auto;
+}
+
+header h1 {
+  dislay: block;
+  width : 400px;
+  text-align: right;
+}
+
+header > div {
+  position: relative;
+  top: -40px;
+  left: 420px;
+}
+
+header h2 {
+  font-size: 32px;
+  line-height: 36px;
+  margin : 0;
+  padding : 0;
+}
+
+header .custom-links {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+header .custom-links a {
+  text-decoration: none;
+  color: #28c7ef;
 }
 
 .content h2 { color: #333333; }
@@ -29,7 +65,7 @@ time {
   text-align : right;
 
   position: relative;
-  top: -50px;
+  top: -30px;
   left : -165px;
   width: 150px;
   display: block;
@@ -45,6 +81,10 @@ time {
 
 .content a:hover {
   border-bottom: 1px solid #28c7ef;
+}
+
+article {
+  margin-bottom: 72px;
 }
 
 pre {
