@@ -20,6 +20,27 @@
 <!--            <span class="post-tags-set">on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}}</span>-->
         </div>
       <div>
+
+      <section id="comments">
+      <div id="disqus_thread"></div>
+
+      <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = 'cendres'; // required: replace example with your forum shortname
+
+          // The following are highly recommended additional parameters. Remove the slashes in front to use.
+          var disqus_identifier = '{{ page.id }}'.slice(1);
+          var disqus_url = 'http://cendres.net{{ page.id }}';
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+      </script>
+      </section>
+
     </article>
     </main>
   </body>

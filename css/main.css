@@ -113,6 +113,10 @@ blockquote {
   background: rgba(206,206,206,0.1);
 }
 
+#comments {
+  margin-top: 72px;
+}
+
 .site-footer {
   padding : 30px 0;
   font-size : 12px;
