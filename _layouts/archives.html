@@ -1,0 +1,32 @@
+---
+---
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body itemscope itemtype="http://schema.org/Article">
+    {% include header.html %}
+    <main class="content" role="main">
+
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+      <div class="article-item">
+            <header class="post-header">
+              <h2 class="post-title" itemprop="name"><a href="{{ page.url }}" itemprop="url">{{ page.title }}</a></h2>
+            </header>
+        <section class="post archives" itemprop="description">
+        <ul>
+        {% for post in site.posts %}
+          <li><time datetime="{{ post.date | date_to_long_string }}">{{ post.date | date: "%d.%m.%y" }}</time> <a href="{{ post.url }}" itemprop="url">{{ post.title }}</a></li>
+        {% endfor %}
+        </ul>
+
+
+         </section>
+        <div class="post-meta">
+<!--            <span class="post-tags-set">on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}}</span>-->
+        </div>
+      <div>
+
+    </article>
+    </main>
+  </body>
+</html>

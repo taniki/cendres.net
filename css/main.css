@@ -61,7 +61,7 @@ header .custom-links a {
 .content h4 { color: #333333; }
 .content h5 { color: #333333; }
 
-time {
+header time {
   font-size: 27px;
   color: rgba(206,206,206,1);
   text-align : right;
@@ -112,6 +112,11 @@ blockquote {
   padding : 3px 24px;
   background: rgba(206,206,206,0.1);
 }
+
+.archives { margin-top: 36px; }
+
+.archives ul li { list-style-type: none; margin-bottom : 8px; }
+.archives ul li time { color: rgba(206,206,206,1); }
 
 #comments {
   margin-top: 72px;
