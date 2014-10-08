@@ -23,6 +23,20 @@ h1 {
 .content h4 { color: #333333; }
 .content h5 { color: #333333; }
 
+time {
+  font-size: 27px;
+  color: rgba(206,206,206,1);
+  text-align : right;
+
+  position: relative;
+  top: -50px;
+  left : -165px;
+  width: 150px;
+  display: block;
+
+  height : 0;
+}
+
 .content a {
   color : #28c7ef;
   text-decoration: none;
