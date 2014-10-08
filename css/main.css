@@ -49,3 +49,30 @@ pre code {
   font-style: normal;
   font-size: 16px;
 }
+
+.site-footer {
+  padding : 30px 0;
+  font-size : 12px;
+
+  text-align: center;
+}
+
+.site-footer .subscribe {
+  font-size: 30px;
+}
+
+.site-footer a.subscribe { color: #aaeeff; }
+.site-footer a.subscribe:hover { color: #28c7ef; }
+
+.site-footer .inner {
+  color : rgba(206,206,206,1);
+}
+
+.site-footer .inner section {
+  display: inline;
+}
+
+.site-footer .inner section a {
+  color: #28c7ef;
+  text-decoration: none;
+}
