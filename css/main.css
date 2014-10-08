@@ -31,6 +31,7 @@ header h1 {
 }
 
 header > div {
+  width : 400px;
   position: relative;
   top: -40px;
   left: 420px;
