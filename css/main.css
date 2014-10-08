@@ -106,6 +106,13 @@ pre code {
   font-size: 16px;
 }
 
+blockquote {
+  border-left: 3px solid rgba(206,206,206,0.5);
+  margin : 0;
+  padding : 3px 24px;
+  background: rgba(206,206,206,0.1);
+}
+
 .site-footer {
   padding : 30px 0;
   font-size : 12px;
