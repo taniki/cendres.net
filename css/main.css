@@ -85,6 +85,10 @@ header time {
   border-bottom: 1px solid #28c7ef;
 }
 
+section.post-content {
+  padding-top: 1em;
+}
+
 article {
   margin-bottom: 72px;
 }
