@@ -9,4 +9,4 @@ layout: post
 >
 > Patrick Robbins, [Twenty Things YOU Can Do To Address the Climate Crisis!](http://thischangeseverything.org/twenty-things-you-can-do-to-address-the-climate-crisis/)
 
-Do not know if this just my sociologist ethos that resurfaces temporarily but there is a lot of strong signals about strenghtening the premises of the hidden class warfare. Being part of the middle class, I feel like a duty to forward that kind of message. The rest has a lot of food for your mind (specially for all the other kinds of inner self) and is a must-read.
+Do not know if this just my sociologist ethos that resurfaces temporarily but there is a lot of strong signals about strenghtening the premises of the hidden class warfare. Being part of the middle class, I feel like a duty to forward that kind of message. The list has a lot of food for your mind (specially for all the other kinds of inner self) and contains stuffs that should be remembered.
