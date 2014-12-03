@@ -1,5 +1,6 @@
 ---
 title: parler avec
+layout: post
 ---
 
 C'était un soir de début d'hiver, après s'être retrouvés à une terrasse désertée à cause du froid et peuplée par l'indifférence, en plein milieu d'un débat ou d'une discussion un peu trop abstraite pour être prise au sérieuse, un ami me reprochait "de ne pas parler à une personne" mais de vouloir "parler avec". Peut-être que ce n'était pas négatif mais cela m'a un peu laissé pensif.
