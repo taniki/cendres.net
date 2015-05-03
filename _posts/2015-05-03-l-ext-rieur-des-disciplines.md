@@ -7,6 +7,8 @@ title: "l'extérieur des disciplines"
 >
 > <cite>Michel Foucault, L'ordre du discours, p. 35</cite>
 
+## Dire vrai et dire dans le vrai
+
 > Il se peut toujours qu'on dise le vrai dans l'espace d'une extériorité sauvage; mais on est dansle vrai qu'en obéissant aux règles d'une « police » discursive qu'on doit réactiver en chacun de ses discours.
 >
 > <cite>Michel Foucault, L'ordre du discours, p. 37</cite>
