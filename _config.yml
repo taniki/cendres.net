@@ -55,3 +55,10 @@ social:
 
 kramdown:
   input: GFM
+  
+metadata:
+  _posts:
+    - name: "title"
+      field:
+        element: "text"
+        label: "title"
