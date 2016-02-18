@@ -24,7 +24,9 @@ Me suis remis au sujet de ma thèse mais je continue quelques exercices sur la t
 - <em>JPod</em>, Douglass Coupland
 - <em>Branches</em>, Philip Ball
 
-J'avais planifié la lecture de <em>Philosophy and social hope</em> pour l'essai futurologique sur les USA en 2050. Très intéressant et visionnaire dans la manière de replacer l'esprit et la culture philosophique guidant cette nation. Cela change un peu des regards myopes issus de la géopolitique actuelle.</p>  <p>Si <em>JPod</em> ne m'avait pas emballé au final, cela reste un bon roman contemporain. Je me demande à quel point il est compréhensible pour qui ne maitriserait pas le jarguon des geeks. Je pensais par exemple que <em>Microserfs</em> me plairait mieux au fina mais son côté daté le rend maintenat un peu décalé si l'on a pas en mémoire quelques documentaires sur l'époque glorieuse de la Sillicon Valley, la mythologie de Microsoft ainsi que ce concept un peu archaïque qu'est la Culture d'Entreprise.
+J'avais planifié la lecture de <em>Philosophy and social hope</em> pour l'essai futurologique sur les USA en 2050. Très intéressant et visionnaire dans la manière de replacer l'esprit et la culture philosophique guidant cette nation. Cela change un peu des regards myopes issus de la géopolitique actuelle.
+
+Si <em>JPod</em> ne m'avait pas emballé au final, cela reste un bon roman contemporain. Je me demande à quel point il est compréhensible pour qui ne maitriserait pas le jarguon des geeks. Je pensais par exemple que <em>Microserfs</em> me plairait mieux au fina mais son côté daté le rend maintenat un peu décalé si l'on a pas en mémoire quelques documentaires sur l'époque glorieuse de la Sillicon Valley, la mythologie de Microsoft ainsi que ce concept un peu archaïque qu'est la Culture d'Entreprise.
 
 #### Session londonienne 1
 
