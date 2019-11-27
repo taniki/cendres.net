@@ -2,7 +2,6 @@
 layout: default
 ---
 <main class="content" role="main">
-
     <div class="cf frame">
       {% for post in paginator.posts %}
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
@@ -14,8 +13,6 @@ layout: default
             <section class="post-content" itemprop="description">
               {{ post.content }}
             </section>
-
-<!--            <span class="post-tags-set">on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}}</span>-->
           <div>
         </article>
       {% endfor %}
@@ -34,9 +31,4 @@ layout: default
         {% endif %}
       {% endif %}
     </nav>
-
-
-    <!-- {{!! After all the posts, we have the previous/next pagination links }}
-    {{pagination}} -->
-
 </main>
